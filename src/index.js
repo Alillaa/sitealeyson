@@ -1,17 +1,22 @@
+// src/index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom/client'; // React 18 ve sonrası için client API
+// import ReactDOM from 'react-dom'; // React 17 ve öncesi için
 
+import './index.css'; // Opsiyonel: Eğer index.js'e özel global stilleriniz varsa
+// Genellikle App.css yeterli olur ve App.js'de import edilir.
+// Eğer bu dosya yoksa veya App.css'i tercih ediyorsanız bu satırı kaldırabilirsiniz.
+
+import App from './App'; // Ana uygulama bileşenimiz
+import reportWebVitals from './reportWebVitals'; // Performans ölçümü için (opsiyonel)
+
+// React 18 ve sonrası için root oluşturma ve render etme
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
