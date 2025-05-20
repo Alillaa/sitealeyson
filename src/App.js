@@ -119,7 +119,7 @@ function App() {
         setActivePage(pageId); // React state'ini güncelle
         if (window.location.hash !== `#${pageId}`) {
           // Tarayıcı geçmişinde çok fazla girdi oluşmasını engellemek için replaceState daha iyi olabilir
-          history.pushState({page: pageId}, '', `#${pageId}`);
+          window.history.pushState({page: pageId}, '', `#${pageId}`);
           // window.location.hash = pageId; // Basit yöntem
         }
         // Scroll işlemini, sayfa 'active' class'ını aldıktan ve animasyon başladıktan
